@@ -1,0 +1,35 @@
+<ion-view view-title="Register">
+    <ion-nav-buttons side="left">
+        <button class="button button-stable" ng-click="back()">Back</button>
+    </ion-nav-buttons>
+    <ion-content padding="true">
+        <br>
+        <center><img src="/android_asset/www/img/kidstracker.png" alt="Logo" height="100px"></center>
+        <br>
+        <form ng-submit="doReg(regData)">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Username</span>
+                    <input type="text" placeholder="Username" ng-model="regData.username">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">First Name</span>
+                    <input type="text" placeholder="First Name" ng-model="regData.fname">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" placeholder="Last Name" ng-model="regData.lname">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="Password" ng-model="regData.password">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Email</span>
+                    <input type="email" placeholder="Email" ng-model="regData.email">
+                </label>
+            </div>
+            <button class="button button-full button-stable" type="submit" ng-disabled="!regData.username || !regData.fname || !regData.lname || !regData.password || !regData.email">Register</button>
+        </form>
+    </ion-content>
+</ion-view>
